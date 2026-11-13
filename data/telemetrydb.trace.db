@@ -1,0 +1,68 @@
+2026-11-12 12:17:53.390629+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "DELETE [*]* FROM TELEMETRY_DATA WHERE 1"; attendu "identifier"
+Syntax error in SQL statement "DELETE [*]* FROM TELEMETRY_DATA WHERE 1"; expected "identifier"; SQL statement:
+DELETE * FROM TELEMETRY_DATA WHERE 1 [42001-240]
+2026-11-12 12:18:03.540417+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "DELETE [*]* FROM TELEMETRY_DATA WHERE 1=1"; attendu "identifier"
+Syntax error in SQL statement "DELETE [*]* FROM TELEMETRY_DATA WHERE 1=1"; expected "identifier"; SQL statement:
+DELETE * FROM TELEMETRY_DATA WHERE 1=1 [42001-240]
+2026-11-12 12:18:16.095490+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "DELETE [*]* FROM TELEMETRY_DATA WHERE TRUE"; attendu "identifier"
+Syntax error in SQL statement "DELETE [*]* FROM TELEMETRY_DATA WHERE TRUE"; expected "identifier"; SQL statement:
+DELETE * FROM TELEMETRY_DATA WHERE TRUE [42001-240]
+2026-11-12 12:18:41.271153+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "DELETE [*]* FROM TELEMETRY_DATA WHERE 1==1"; attendu "identifier"
+Syntax error in SQL statement "DELETE [*]* FROM TELEMETRY_DATA WHERE 1==1"; expected "identifier"; SQL statement:
+DELETE * FROM TELEMETRY_DATA WHERE 1==1 [42001-240]
+2026-11-12 12:18:57.616126+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "DELETE [*]* FROM TELEMETRY_DATA WHERE 1 LIKE 1"; attendu "identifier"
+Syntax error in SQL statement "DELETE [*]* FROM TELEMETRY_DATA WHERE 1 LIKE 1"; expected "identifier"; SQL statement:
+DELETE * FROM TELEMETRY_DATA WHERE 1 LIKE 1 [42001-240]
+2026-11-12 12:19:07.088411+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "[*]TELEMETRY_DATA"; attendu "TRUNCATE"
+Syntax error in SQL statement "[*]TELEMETRY_DATA"; expected "TRUNCATE"; SQL statement:
+TELEMETRY_DATA [42001-240]
+2026-11-12 12:19:08.234169+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "[*]TELEMETRY_DATA"; attendu "TRUNCATE"
+Syntax error in SQL statement "[*]TELEMETRY_DATA"; expected "TRUNCATE"; SQL statement:
+TELEMETRY_DATA [42001-240]
+2026-11-12 12:19:17.147009+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "[*]TELEMETRY_DATA TELEMETRY_DATA TELEMETRY_DATA"; attendu "TRUNCATE"
+Syntax error in SQL statement "[*]TELEMETRY_DATA TELEMETRY_DATA TELEMETRY_DATA"; expected "TRUNCATE"; SQL statement:
+TELEMETRY_DATA TELEMETRY_DATA TELEMETRY_DATA [42001-240]
+2026-11-12 12:19:18.111569+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "[*]TELEMETRY_DATA TELEMETRY_DATA TELEMETRY_DATA"; attendu "TRUNCATE"
+Syntax error in SQL statement "[*]TELEMETRY_DATA TELEMETRY_DATA TELEMETRY_DATA"; expected "TRUNCATE"; SQL statement:
+TELEMETRY_DATA TELEMETRY_DATA TELEMETRY_DATA [42001-240]
+2026-11-12 12:19:27.397158+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "[*]TELEMETRY_DATA"; attendu "TRUNCATE"
+Syntax error in SQL statement "[*]TELEMETRY_DATA"; expected "TRUNCATE"; SQL statement:
+TELEMETRY_DATA [42001-240]
+2026-11-12 12:19:52.730172+01:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "DELETE [*]* FROM TELEMETRY_DATA"; attendu "identifier"
+Syntax error in SQL statement "DELETE [*]* FROM TELEMETRY_DATA"; expected "identifier"; SQL statement:
+DELETE * FROM TELEMETRY_DATA [42001-240]
+2026-11-12 12:37:21.093664+01:00 jdbc[15]: null
+org.h2.message.DbException: La connexion n'a pas été fermée et a été récupérée par le ramasse miette.
+The connection was not closed by the application and is garbage collected [90018-240]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:217)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:134)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: La connexion n'a pas été fermée et a été récupérée par le ramasse miette.
+The connection was not closed by the application and is garbage collected [90018-240]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 16 more
